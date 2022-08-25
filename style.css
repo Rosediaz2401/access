@@ -331,7 +331,7 @@ a{
 }
 .link-img:hover{
     filter: brightness(115%);
-    transition: .5s ease;
+    transition: all 1s;
 }
 .img-card{
     padding-bottom: 16px;
@@ -392,6 +392,7 @@ a{
     border-radius: 10px;
     padding: 0px;
   }
+
   .card-body {
     display: flex;
     flex-direction: column;
@@ -431,14 +432,33 @@ a{
     align-items: center;
     text-align: center;
   }
-  .input{
+  .form-group{
+    padding: 16px;
+  }
+  .form input,
+  textarea {
     border: 1px solid lightgrey;
     width: 100%;
     margin: 10px 0px;
     padding: 16px;
+    border-radius: 10px;
   }
-  
-
+ .formbutton{
+    margin: 11px;
+    bottom: 80px;
+    width: 4rem;
+    height: 4rem;
+    background: var(--second-color);
+    box-shadow: 0 2px 20px rgb(0 0 0 / 20%) ;
+ }  
+ path{
+    fill: black;
+ }
+ .thank-you-message{
+    text-align: center;
+    font-weight: bold;
+    padding-top: 16px;
+ }
 
 @media only screen and (min-width: 480px){
     .logo-container{
@@ -461,43 +481,24 @@ a{
         max-width: 800px;
         margin: auto;
     }
-
 }
 
 
 @media only screen and (min-width: 760px){
-/* 
-    .panel-btn{
-        display: none;
-    }
-    .nav-panel{
-        display: flex;
-        align-items: center;
-      }
-     .navigation{
-      flex-direction: row;
-      justify-content: space-around;
-    }
+
     .main-container{
         flex-direction: row;
       }
-    .menu{
-        display: inline;
+    .panel-btn{
+        display: none;
     }
-    .menu-item a{
-        font-size: 16px;
-        font-weight: bold;
-        text-decoration: underline;
-    }
-    .menu-item:hover{
-        width: auto;
-    } */
     .navigation{
         display: flex;
         flex-direction: row;
-        justify-content: center;
+        justify-content: space-evenly;
         width: 100%;
         margin-bottom: 0px;
+        padding-top: 0px;
     }
     .menu-item a{
         font-size: 14px;
@@ -506,6 +507,9 @@ a{
     }
     .nav-panel{
         opacity: 1;
+        position: inherit;
+        transform: none;
+        transition: none;
     }
     .menu a{
         padding: 16px;    
@@ -557,6 +561,7 @@ a{
     .witness-section{
         width: 45%;
         margin: 12px;
+        border-radius: 10px;
     }
     .card-img{
         width: 100%;
@@ -578,6 +583,9 @@ a{
         display: flex;
         justify-content: space-evenly;
     }
+    .formbutton{
+        bottom: 0px !important;
+     }  
  
 }
 
@@ -597,13 +605,11 @@ a{
     .logo-container{
         width: 10%;
     }   
-    .menu-item,
+    .menu-item a,
     .menu-item:hover{
         font-size: 16px;
     }
-    a{
-        font-size: 16px;
-    }
+
     .content-mq{
         max-width: 1400px;
         margin: auto;

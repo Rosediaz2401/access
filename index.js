@@ -25,4 +25,41 @@ function hamburgerMenu(panelBtn,panel,menuLink){
         })
     })
 
-    
+
+    window.formbutton=window.formbutton||function(){(formbutton.q=formbutton.q||[]).push(arguments)};
+
+    formbutton("create", {
+        action: "https://formspree.io/f/xoqbvlpo",
+        title: "¿Cómo puedo ayudarte?",
+        fields: [
+          { 
+            type: "email", 
+            label: "Email:", 
+            name: "email",
+            required: true,
+            placeholder: "tucorreo@email.com"
+          },
+          {
+            type: "textarea",
+            label: "Mensaje:",
+            name: "message",
+            placeholder: "Escribe tu mensaje",
+          },
+          
+          { type: "submit" }      
+        ],
+        styles: {
+          title: {
+            backgroundColor: "black"
+          },
+          button: {
+            backgroundColor: "white",
+            margin: "11px",
+            bottom: "80px",
+            width: "4rem",
+            height: "4rem",
+            background: "white",
+            boxShadow: "0 2px 20px rgb(0 0 0 / 20%)"
+          }
+        }
+      });
